@@ -1,4 +1,3 @@
-// components/Gallery.js
 import React, { useState } from "react";
 import { View, Text, Image, Button, StyleSheet } from "react-native";
 import { images } from "./imageList";
@@ -8,13 +7,13 @@ const Gallery = () => {
 
   const handleNext = () => {
     if (currentIndex < images.length - 1) {
-      setCurrentIndex(currentIndex + 1);
+      setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
 
   const handlePrevious = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
+      setCurrentIndex((prevIndex) => prevIndex - 1);
     }
   };
 
